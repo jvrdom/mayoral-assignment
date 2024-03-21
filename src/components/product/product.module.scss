@@ -25,6 +25,9 @@
     font-size: 0.875rem;
     margin: 0;
     font-weight: 100;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   :global .price-container {
