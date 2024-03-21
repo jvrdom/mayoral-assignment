@@ -3,6 +3,9 @@
  */
 const config = {
   reactStrictMode: true,
+  images: {
+    domains: ['picsum.photos'],
+  },
 };
 
 module.exports = config;

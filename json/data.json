@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "https://picsum.photos/200/400/",
+      "title": "Polo manga larga estampada",
+      "price": 18.99,
+      "discount": 20,
+      "moreColors": true
+    },
+    {
+      "id": 2,
+      "image": "https://picsum.photos/200/400/",
+      "title": "Polo manga larga bandas azules",
+      "price": 20.99,
+      "discount": 0,
+      "moreColors": false
+    },
+    {
+      "id": 3,
+      "image": "https://picsum.photos/200/400/",
+      "title": "Polo manga larga miniestación",
+      "price": 16.99,
+      "discount": 20,
+      "moreColors": true
+    },
+    {
+      "id": 4,
+      "image": "https://picsum.photos/200/400/",
+      "title": "Polo manga larga estampada",
+      "price": 18.99,
+      "discount": 0,
+      "moreColors": true
+    },
+    {
+      "id": 5,
+      "image": "https://picsum.photos/200/400/",
+      "title": "Polo manga larga estampada",
+      "price": 18.99,
+      "discount": 0,
+      "moreColors": false
+    },
+    {
+      "id": 6,
+      "image": "https://picsum.photos/200/400/",
+      "title": "Polo manga larga bandas azules",
+      "price": 18.99,
+      "discount": 15,
+      "moreColors": true
+    },
+    {
+      "id": 7,
+      "image": "https://picsum.photos/200/400/",
+      "title": "Polo manga larga miniestación",
+      "price": 18.99,
+      "discount": 0,
+      "moreColors": true
+    },
+    {
+      "id": 8,
+      "image": "https://picsum.photos/200/400/",
+      "title": "Polo manga larga estampada",
+      "price": 18.99,
+      "discount": 0,
+      "moreColors": false
+    },
+    {
+      "id": 9,
+      "image": "https://picsum.photos/200/400/",
+      "title": "Polo manga larga bandas azules",
+      "price": 18.99,
+      "discount": 0,
+      "moreColors": true
+    },
+    {
+      "id": 10,
+      "image": "https://picsum.photos/200/400/",
+      "title": "Polo manga larga miniestación",
+      "price": 18.99,
+      "discount": 20,
+      "moreColors": true
+    }
+  ]
+}
