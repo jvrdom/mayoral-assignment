@@ -1,9 +1,10 @@
 import { IconSearch } from '@tabler/icons-react';
 
+import { ChangeEvent } from 'react';
 import classes from './search.module.scss';
 
 const Search = ({ onSearch }) => {
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     onSearch(e.target.value);
   };
 

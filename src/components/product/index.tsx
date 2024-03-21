@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import classes from './product.module.scss';
 import Button from 'components/button';
 import { Product } from 'interfaces/data';
+import Image from 'next/image';
 import Link from 'next/link';
+import classes from './product.module.scss';
 
 function calculateDiscount(originalPrice: number, discount: number) {
   return originalPrice - (originalPrice * discount) / 100;

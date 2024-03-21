@@ -1,6 +1,6 @@
 import Product from 'components/product';
-import classes from './products.module.scss';
 import { Product as ProductType } from 'interfaces/data';
+import classes from './products.module.scss';
 
 const Products = ({ products }: { products: ProductType[] }) => {
   return (

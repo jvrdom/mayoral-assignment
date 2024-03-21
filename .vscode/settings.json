@@ -1,0 +1,33 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.insertSpaces": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.wordWrapColumn": 130,
+  "editor.rulers": [130],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.sortMembers": "explicit"
+  },
+  "[javascript, typescript]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "eslint.lintTask.enable": true,
+  "typescript.surveys.enabled": true,
+  "typescript.validate.enable": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "cSpell.language": "en,es-ES",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "cSpell.words": ["bromatology", "razon"]
+}

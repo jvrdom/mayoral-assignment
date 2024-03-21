@@ -1,4 +1,4 @@
-import { IconPlus, IconMinus } from '@tabler/icons-react';
+import { IconMinus, IconPlus } from '@tabler/icons-react';
 
 import Products from 'components/products';
 import Search from 'components/search';
