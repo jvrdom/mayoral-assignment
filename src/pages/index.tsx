@@ -3,6 +3,8 @@ import { IconMinus, IconPlus } from '@tabler/icons-react';
 import Products from '@/components/products';
 import Search from '@/components/search';
 import useSearch from '@/components/search/hook';
+import Select from '@/components/select';
+import useSelect from '@/components/select/hooks';
 import { Data, Product } from '@/interfaces/data';
 import { NextPage } from 'next';
 import { useState } from 'react';
@@ -18,6 +20,7 @@ export const getServerSideProps = async () => {
 const HomePage: NextPage = ({ products }: { products: Product[] }) => {
   const [hideLastElement, setHideLastElement] = useState(false);
   const { query, handleChange } = useSearch();
+  const { sortMethods, sortState, handleChange: handleSelect } = useSelect();
 
   const searchFilter = (array: Product[]) => {
     return array.filter((el) => el.title.toLowerCase().includes(query));
@@ -52,7 +55,17 @@ const HomePage: NextPage = ({ products }: { products: Product[] }) => {
           />
         </div>
       </header>
-      <Products products={filtered} hideLastElement={hideLastElement} />
+
+      <Select
+        onChange={(value: string) => {
+          handleSelect(value);
+        }}
+      />
+
+      <Products
+        products={filtered.sort(sortMethods[sortState].method)}
+        hideLastElement={hideLastElement}
+      />
     </main>
   );
 };

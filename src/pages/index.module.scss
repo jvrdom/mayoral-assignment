@@ -3,9 +3,11 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column-reverse;
+  margin-bottom: 10px;
 
   @media (min-width: 960px) {
     flex-direction: row;
+    margin-bottom: 0;
   }
 }
 
