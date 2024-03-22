@@ -16,6 +16,7 @@ export const getServerSideProps = async () => {
 
 const HomePage: NextPage = ({ products }: { products: Product[] }) => {
   const [query, setQuery] = useState('');
+  const [hideLastElement, setHideLastElement] = useState(false);
 
   const searchFilter = (array: Product[]) => {
     return array.filter((el) => el.title.toLowerCase().includes(query));
@@ -32,11 +33,25 @@ const HomePage: NextPage = ({ products }: { products: Product[] }) => {
           }}
         />
         <div>
-          <IconMinus size={48} color="#cecece" />
-          <IconPlus size={48} color="#cecece" />
+          <IconMinus
+            size={48}
+            color="#cecece"
+            onClick={() => {
+              setHideLastElement(true);
+            }}
+            cursor="pointer"
+          />
+          <IconPlus
+            size={48}
+            color="#cecece"
+            onClick={() => {
+              setHideLastElement(false);
+            }}
+            cursor="pointer"
+          />
         </div>
       </header>
-      <Products products={filtered} />
+      <Products products={filtered} hideLastElement={hideLastElement} />
     </main>
   );
 };
