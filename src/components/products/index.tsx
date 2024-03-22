@@ -1,6 +1,6 @@
-import Product from 'components/product';
-import { buildRows } from 'components/products/utils';
-import { Product as ProductType } from 'interfaces/data';
+import Product from '@/components/product';
+import { buildRows } from '@/components/products/utils';
+import { Product as ProductType } from '@/interfaces/data';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import classes from './products.module.scss';

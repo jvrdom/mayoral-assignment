@@ -1,9 +1,9 @@
 import { IconMinus, IconPlus } from '@tabler/icons-react';
 
-import Products from 'components/products';
-import Search from 'components/search';
-import useSearch from 'components/search/hook';
-import { Data, Product } from 'interfaces/data';
+import Products from '@/components/products';
+import Search from '@/components/search';
+import useSearch from '@/components/search/hook';
+import { Data, Product } from '@/interfaces/data';
 import { NextPage } from 'next';
 import { useState } from 'react';
 import classes from './index.module.scss';

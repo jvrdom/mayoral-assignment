@@ -1,10 +1,10 @@
-import Button from 'components/button';
-import { Product } from 'interfaces/data';
+import Button from '@/components/button';
+import { Product } from '@/interfaces/data';
 import Image from 'next/image';
 import Link from 'next/link';
 import classes from './product.module.scss';
 
-function calculateDiscount(originalPrice: number, discount: number) {
+export function calculateDiscount(originalPrice: number, discount: number) {
   return originalPrice - (originalPrice * discount) / 100;
 }
 
@@ -12,7 +12,7 @@ const Product = ({ product }: { product: Product }) => {
   const { title, image, discount, price } = product;
 
   return (
-    <article className={classes.product}>
+    <article className={classes.product} data-testid="product-card">
       <header>
         <div className="image">
           <Image src={image} fill alt={title} priority />

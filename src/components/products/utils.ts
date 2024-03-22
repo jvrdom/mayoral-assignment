@@ -1,4 +1,4 @@
-import { Product } from 'interfaces/data';
+import { Product } from '@/interfaces/data';
 
 export function buildRows(products: Product[], columns: number) {
   const productsCopy = [...products];
