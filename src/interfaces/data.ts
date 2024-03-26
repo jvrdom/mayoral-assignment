@@ -3,8 +3,9 @@ export type Product = {
   title: string;
   price: number;
   discount: number;
-  moreColors: boolean;
+  hasMoreColors: boolean;
   image: string;
+  newPrice: number;
 };
 
 export type Data = {

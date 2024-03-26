@@ -30,12 +30,14 @@ const Products = ({
       {rows.map((row, index) => {
         return (
           <ul className={classes.products} key={`row-${index}`}>
-            {row.map((a: ProductType, index: number) => {
+            {row.map((product: ProductType, index: number) => {
               const isLastElement = index === row.length - 1;
 
+              console.log(product);
+
               return (
-                <li key={a.id} className={hideLastElement && isLastElement ? 'hide' : ''}>
-                  <Product product={a} />
+                <li key={product.id} className={hideLastElement && isLastElement ? 'hide' : ''}>
+                  <Product product={product} />
                 </li>
               );
             })}

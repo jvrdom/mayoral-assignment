@@ -4,7 +4,7 @@
 const config = {
   reactStrictMode: true,
   images: {
-    domains: ['picsum.photos'],
+    domains: ['assets.mayoral.com'],
   },
 };
 

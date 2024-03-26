@@ -4,33 +4,27 @@ import Image from 'next/image';
 import Link from 'next/link';
 import classes from './product.module.scss';
 
-export function calculateDiscount(originalPrice: number, discount: number) {
-  return originalPrice - (originalPrice * discount) / 100;
-}
-
 const Product = ({ product }: { product: Product }) => {
-  const { title, image, discount, price } = product;
+  const { title, image, discount, price, newPrice } = product;
 
   return (
     <article className={classes.product} data-testid="product-card">
       <header>
-        <div className="image">
-          <Image src={image} fill alt={title} priority />
-        </div>
+        <figure>
+          <Image src={image} alt={title} priority fill />
+        </figure>
         <div className="title-container">
           <h2 className="title">{title}</h2>
         </div>
       </header>
       <div className="price-container">
-        <p className={`price ${discount > 0 ? 'old' : ''}`}>{price}€</p>
-        {discount > 0 && (
-          <p className="price discount">{`${calculateDiscount(price, discount).toFixed(
-            2,
-          )}€ (-${discount}%)`}</p>
+        <p className={`price ${price !== newPrice ? 'old' : ''}`}>{price}€</p>
+        {price !== newPrice && (
+          <p className="price discount">{`${newPrice.toFixed(2)}€ (-${discount}%)`}</p>
         )}
       </div>
       <div className="button-container">
-        {product.moreColors && (
+        {product.hasMoreColors && (
           <div className="link">
             <Link href="/">más colores</Link>
           </div>

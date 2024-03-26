@@ -13,8 +13,14 @@ import classes from './index.module.scss';
 export const getServerSideProps = async () => {
   const res = await fetch('http://localhost:3000/api/products');
   const data: Data = await res.json();
+  const newProducts = data.products.map((p) => {
+    return {
+      ...p,
+      newPrice: p.price - (p.price * p.discount) / 100,
+    };
+  });
 
-  return { props: { products: data.products } };
+  return { props: { products: newProducts } };
 };
 
 const HomePage: NextPage = ({ products }: { products: Product[] }) => {

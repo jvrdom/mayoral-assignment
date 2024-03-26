@@ -1,12 +1,28 @@
 .products {
   display: grid;
-  grid-template-columns: repeat(2, 47%);
-  gap: 25px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  gap: 1rem;
   padding: 0;
+  justify-items: center;
 
   li {
     list-style: none;
     position: relative;
+    align-items: center;
+    border-radius: 0.3rem;
+    border: 2px solid #87ceeb;
+    box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 400px;
+    min-height: 300px;
+    min-width: 100px;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
   }
 
   :global .hide {
@@ -14,6 +30,10 @@
   }
 
   @media (min-width: 960px) {
-    grid-template-columns: repeat(5, 300px);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    li {
+      padding: 1.5rem;
+    }
   }
 }

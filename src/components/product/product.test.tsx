@@ -1,36 +1,38 @@
-import Product, { calculateDiscount } from '@/components/product';
+import Product from '@/components/product';
 import { render } from '@testing-library/react';
 
 const product = {
   id: 1,
-  image: 'https://picsum.photos/200/400/',
+  image:
+    'https://assets.mayoral.com/images/t_auto_img,f_auto,c_limit,w_300/v1690799930/13-04103-044-XL-4/polo-punto-flame-better-cotton-nino-azafran-XL-4.jpg',
   title: 'Polo manga larga estampada',
-  price: 18.99,
-  discount: 20,
-  moreColors: true,
+  price: 29.99,
+  newPrice: 26.99,
+  discount: 10,
+  hasMoreColors: true,
 };
 
 const productWithoutDiscount = {
   id: 1,
-  image: 'https://picsum.photos/200/400/',
+  image:
+    'https://assets.mayoral.com/images/t_auto_img,f_auto,c_limit,w_300/v1690533110/13-04101-049-XL-4/polo-cuello-contraste-better-cotton-nino-oregano-XL-4.jpg',
   title: 'Polo manga larga estampada',
   price: 18.99,
+  newPrice: 18.99,
   discount: 0,
-  moreColors: true,
+  hasMoreColors: true,
 };
 
 describe('Product', () => {
   it('should render component with the correct data', () => {
     const { getByTestId, getByText, getByAltText } = render(<Product product={product} />);
-    const { title, price, discount, image } = product;
+    const { title, price, discount, image, newPrice } = product;
 
     const card = getByTestId('product-card');
     const titleTxt = getByText(title);
     const img = getByAltText(title);
     const priceText = getByText(`${price}€`);
-    const discountTxt = getByText(
-      `${calculateDiscount(price, discount).toFixed(2)}€ (-${discount}%)`,
-    );
+    const discountTxt = getByText(`${newPrice.toFixed(2)}€ (-${discount}%)`);
 
     expect(card).toBeDefined();
     expect(titleTxt).toBeDefined();
